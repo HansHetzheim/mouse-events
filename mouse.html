@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="mouse.css">
+    <title></title>
+  </head>
+  <body>
+
+<div class="container">
+  <div id="hoverMe1" class="hoverMe" onMouseOver="hide(this)">
+    <h1>Let's get out of here</h1>
+  </div>
+  <div id="hoverMe2" class="hoverMe" onMouseOver="hide(this)">
+    <h1>If you come too close, i'll be gone</h1>
+  </div>
+  <div id="hoverMe3" class="hoverMe" onMouseOver="hide(this)">
+    <h1>Can't touch this</h1>
+  </div>
+</div>
+<div class="resetbutton">
+  <button id="resetbutton" onclick="show()" type="button">RESET!</button>
+</div>
+
+<div id="x-axis" class="position">
+
+</div>
+
+<div id="y-axis" class="position">
+
+</div>
+
+
+
+
+<script type="text/javascript">
+
+function hide(id){
+    id.style.visibility= "hidden";
+  }
+
+function show(){
+  let array = document.getElementsByClassName("hoverMe")
+  for (var i = 0; i < array.length; i++) {
+    array[i].style.visibility= "visible";
+  }
+}
+
+var infoX = document.getElementById('x-axis');
+var infoY = document.getElementById('y-axis');
+
+function tellPosX(p){
+  infoX.innerHTML = 'Position X : ' + p.pageX;
+}
+function tellPosY(p){
+  infoY.innerHTML = 'Position Y : ' + p.pageY;
+}
+addEventListener('mousemove', tellPosX);
+addEventListener('mousemove', tellPosY);
+
+
+</script>
+  </body>
+</html>

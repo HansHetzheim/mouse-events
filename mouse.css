@@ -1,0 +1,28 @@
+.container{
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.hoverMe{
+  border: 1px solid;
+  padding: 15px;
+  margin: 10px;
+  text-align: center;
+  background-color: rgb(156, 210, 210);
+}
+
+.resetbutton{
+  text-align: center;
+}
+#resetbutton{
+  height: 55px;
+  width: 100px;
+  background-color:rgb(64, 214, 111);
+}
+
+.position{
+  text-align: center;
+  margin: 20px;
+}
